@@ -7,10 +7,9 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5; /* cor clara de fundo */
+      background-color: #f5f5f5;
       padding: 20px;
     }
-
     .cabecalho {
       position: fixed;
       top: 20px;
@@ -121,7 +120,6 @@
     <button onclick="calcularResultado()">Resultado e Classificação</button>
   </div>
 
-  <!-- Área que será capturada para print -->
   <div id="resultado-container"></div>
 
   <div style="margin-left: 300px; margin-top: 20px;">
@@ -178,7 +176,9 @@
       }
 
       somaNotas += nota;
-      respostas += `<p><strong>${i}.</strong> ${resposta}<br/><strong>Nota:</strong> ${nota}</p>`;
+      respostas += `<p><strong>${i}. ${perguntas[i - 1]}</strong><br/>
+      ${resposta}<br/>
+      <strong>Nota:</strong> ${nota}</p>`;
     }
 
     let classificacao = "";
@@ -228,4 +228,3 @@
 
 </body>
 </html>
-
